@@ -309,7 +309,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
 
                     members.forEach(function (member) {
                         if (!member.scope === 'static') return;
-                        itemsNav += "<li data-type='member'>";
+                        itemsNav += "<li data-type='member' data-scope='" + member.scope + "'>";
                         itemsNav += linkto(member.longname, member.name);
                         itemsNav += "</li>";
                     });
@@ -321,7 +321,7 @@ function buildMemberNav(items, itemHeading, itemsSeen, linktoFn) {
                     itemsNav += "<ul class='methods'>";
 
                     methods.forEach(function (method) {
-                        itemsNav += "<li data-type='method'>";
+                        itemsNav += "<li data-type='method' data-scope='" + method.scope + "'>";
                         itemsNav += linkto(method.longname, method.name);
                         itemsNav += "</li>";
                     });
