@@ -654,3 +654,12 @@ span.param-type, .params td .param-type, .param-type dd {
   margin-left: -14px;
   margin-right: 5px;
 }
+
+/** When there are multiple tags, it is not aligned */
+dd[class^="tag-"] > ul > li {
+  margin-left: 10px;
+}
+
+dd[class^="tag-"] > ul > li > p {
+  margin: 0;
+}
